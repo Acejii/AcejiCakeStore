@@ -1,0 +1,57 @@
+// Reset CSS
+@import 'normalize.css';
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+// Variable
+$primary-color: #f8f2e8;
+$secondary-color: #00a887;
+// default config
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+}
+
+button,
+input,
+[tabindex] {
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+
+
+a[href] {
+  text-decoration: none;
+}
+
+.item-hover:hover {
+  cursor: pointer;
+
+  img {
+transform: scale(1.1);
+transition: all 700ms ease;
+}
+
+  h2 {
+    color: $secondary-color
+  }
+}
+
+.item-hover:not(:hover) {
+  img {
+    transform: scale(1);
+    transition: all 700ms ease;
+    }
+}
+

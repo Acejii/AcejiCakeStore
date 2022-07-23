@@ -1,0 +1,24 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* Header */
+    .header-item {
+        @apply flex justify-center items-center px-[24px] hover:cursor-pointer
+    }
+
+    .header-icons {
+        @apply flex justify-end items-center font-medium w-9 h-9 p-2 rounded-[100%] bg-white
+    }
+
+    .nav-item {
+        @apply text-14 text-white font-[700] px-4
+    }
+
+    /* Footer */
+    .footer-title {
+        @apply text-19 font-extrabold
+    }
+}
