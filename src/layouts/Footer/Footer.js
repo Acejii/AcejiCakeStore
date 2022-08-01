@@ -47,21 +47,21 @@ function Footer() {
 
           {/* Social media */}
           <div className="flex mt-6">
-            <a href="#" className="mr-2 hover:text-button">
+            <Link to="/" className="mr-2 hover:text-button">
               <FaFacebook size="24px" />
-            </a>
-            <a href="#" className="mr-2 hover:text-button">
+            </Link>
+            <Link to="/" className="mr-2 hover:text-button">
               <FaInstagram size="24px" />
-            </a>
-            <a href="#" className="mr-2 hover:text-button">
+            </Link>
+            <Link to="/" className="mr-2 hover:text-button">
               <FaTiktok size="24px" />
-            </a>
-            <a href="#" className="mr-2 hover:text-button">
+            </Link>
+            <Link to="/" className="mr-2 hover:text-button">
               <FaTwitter size="24px" />
-            </a>
-            <a href="#" className="hover:text-button">
+            </Link>
+            <Link to="/" className="hover:text-button">
               <FaYoutube size="24px" />
-            </a>
+            </Link>
           </div>
         </div>
 

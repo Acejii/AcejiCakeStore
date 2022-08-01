@@ -26,7 +26,10 @@ function Slider() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src="https://firebasestorage.googleapis.com/v0/b/aceji-cake-store.appspot.com/o/carousel-1.png?alt=media&token=aab448a6-52aa-4b7d-ae65-c5c84d193060" />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/aceji-cake-store.appspot.com/o/carousel-1.png?alt=media&token=aab448a6-52aa-4b7d-ae65-c5c84d193060"
+            alt="carousel"
+          />
         </SwiperSlide>
         <SwiperSlide>
           <img
