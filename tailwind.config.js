@@ -22,7 +22,8 @@ module.exports = {
       },
 
       backgroundColor: {
-        primary: "#5b3236",
+        // primary: "#5b3236",
+        primary: "#610C63",
         secondary: "#f8f2e8",
         button: "#00a887",
       },
@@ -31,6 +32,7 @@ module.exports = {
         primary: "#5b3236",
         secondary: "#f8f2e8",
         button: "#00a887",
+        dark: "#fff",
       },
     },
   },

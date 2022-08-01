@@ -94,13 +94,13 @@ function Footer() {
             Bánh sinh nhật
           </Link>
           <Link className="mt-3 hover:text-button" to="/">
-            Bánh mỳ
+            Bánh Cookies
           </Link>
           <Link className="mt-3 hover:text-button" to="/">
-            Bánh mặn
+            Bánh Brownie
           </Link>
           <Link className="mt-3 hover:text-button" to="/">
-            Bánh Cokies & Minikey
+            Bánh Cupcake & Minicake
           </Link>
         </div>
 

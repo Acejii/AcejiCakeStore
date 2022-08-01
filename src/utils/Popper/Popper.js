@@ -1,13 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { cakePopper } from "../../components/CakeDataList";
+function Popper({ type }) {
+  const cakes = cakePopper.filter((cake) => cake.type === type);
 
-function Popper({ cakes }) {
   return (
-    <div className="min-w-[200px] p-3 absolute z-30 top-[20px] left-0 bg-primary">
+    <div>
       <ul>
         {cakes.map((cake) => (
-          <li key={cake.item} className="mb-2 font-medium hover:text-button">
+          <Link
+            to={cake.path}
+            key={cake.item}
+            className="flex mb-2 font-medium hover:text-button"
+          >
             {cake.item}
-          </li>
+          </Link>
         ))}
       </ul>
     </div>

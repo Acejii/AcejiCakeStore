@@ -29,7 +29,10 @@ function Slider() {
           <img src="https://firebasestorage.googleapis.com/v0/b/aceji-cake-store.appspot.com/o/carousel-1.png?alt=media&token=aab448a6-52aa-4b7d-ae65-c5c84d193060" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/img/carousel-2.png" alt="carousel" />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/aceji-cake-store.appspot.com/o/carousel-2.png?alt=media&token=a899ac60-9c6f-46ee-bc97-a8188f6bfa05"
+            alt="carousel"
+          />
         </SwiperSlide>
       </Swiper>
     </div>

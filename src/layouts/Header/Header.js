@@ -1,42 +1,18 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import {
-  FaSistrix,
-  FaPhone,
-  FaStore,
-  FaUserAlt,
-  FaShoppingCart,
-} from "react-icons/fa";
+import { Link, NavLink } from "react-router-dom";
+import { FaSistrix, FaPhone, FaStore } from "react-icons/fa";
 
 import "./Header.scss";
 import images from "./../../assets/images/index";
 import Popper from "../../utils/Popper/Popper";
 import AccountModal from "../../utils/Modal/AccountModal/AccountModal";
-
-// cakeList
-const cakes = {
-  birthday: [
-    { item: "Gateaux Kem Tươi", path: "/" },
-    { item: "Gateaux Kem Bơ", path: "/" },
-    { item: "Bánh Mousse", path: "/" },
-    { item: "Gateaux Mousse", path: "/" },
-    { item: "Bánh Valentine - Trái Tim", path: "/" },
-    { item: "Bánh Sinh Nhật Bé Trai", path: "/" },
-    { item: "Bánh Sinh Nhật Bé Gái", path: "/" },
-    { item: "Bánh Vẽ", path: "/" },
-    { item: "Bánh In Ảnh", path: "/" },
-    { item: "Bánh sự kiện theo yêu cầu", path: "/" },
-  ],
-  cokie: [
-    { item: "Cookies", path: "/" },
-    { item: "Mini Cake", path: "/" },
-    { item: "Teabreak", path: "/" },
-  ],
-};
+import CartModal from "../../utils/Modal/CartModal/CartModal";
+import SuccessAlert from "../../utils/Alert/SuccessAlert";
 function Header() {
   const [isShowBirthdayBox, setShowBirthdayBox] = useState(false);
   const [isShowCokiesBox, setShowCokiesBox] = useState(false);
-
+  const [isSuccessRegisterAlert, setSuccessRegisterAlert] = useState(false);
+  const [isSuccessLoginAlert, setSuccessLoginAlert] = useState(false);
   return (
     <div className="px-[40px] bg-primary">
       {/* Info nav */}
@@ -53,7 +29,7 @@ function Header() {
           {/* Phone */}
           <a href="tel:+0999999999" className="header-item">
             <FaPhone className="header-icons" />
-            <span className="pl-[8px] text-white font-[500] hover:text-button">
+            <span className="pl-[8px] text-dark font-[500] hover:text-button">
               0999 999 999
             </span>
           </a>
@@ -63,7 +39,7 @@ function Header() {
             <FaStore className="header-icons" />
             <Link
               to="/"
-              className="pl-[8px] text-white font-[500] hover:text-button"
+              className="pl-[8px] text-dark font-[500] hover:text-button"
             >
               Hệ thống cửa hàng
             </Link>
@@ -71,18 +47,15 @@ function Header() {
 
           {/* Account */}
           <div className="header-item">
-            <AccountModal />
+            <AccountModal
+              setSuccessRegisterAlert={setSuccessRegisterAlert}
+              setSuccessLoginAlert={setSuccessLoginAlert}
+            />
           </div>
 
           {/* Cart */}
           <div className="header-item relative">
-            <FaShoppingCart className="header-icons" />
-            <span className="pl-[8px] text-white font-[500] hover:text-button">
-              Giỏ hàng
-            </span>
-            <h5 className="absolute top-[-5px] left-[48px] w-[20px] h-[20px] rounded-full bg-red-500 flex justify-center items-center text-white">
-              5
-            </h5>
+            <CartModal />
           </div>
         </div>
       </div>
@@ -91,33 +64,53 @@ function Header() {
       <div className="px-10 leading-7 flex justify-between items-center">
         {/* navigation */}
         <nav className="main-nav flex py-2">
-          <Link to="/" className="nav-item">
-            <h2 className="hover:text-button">TRANG CHỦ</h2>
-          </Link>
-          <Link
-            to="/collections"
+          <div className="nav-item">
+            <NavLink to="/" className="navlink">
+              <h2 className="hover:text-button">TRANG CHỦ</h2>
+            </NavLink>
+          </div>
+          <div
             className="nav-item relative"
             onMouseOver={() => setShowBirthdayBox(true)}
             onMouseLeave={() => setShowBirthdayBox(false)}
           >
-            <h2 className="hover:text-button">BÁNH SINH NHẬT</h2>
-            {isShowBirthdayBox && <Popper cakes={cakes.birthday} />}
-          </Link>
-          <Link to="/collections" className="nav-item">
-            <h2>BÁNH MỲ</h2>
-          </Link>
-          <Link to="/collections" className="nav-item">
-            <h2 className="hover:text-button">BÁNH MẶN</h2>
-          </Link>
-          <Link
-            to="/collections"
+            <NavLink to="/birthdaycake" className="navlink">
+              <h2 className="hover:text-button">BÁNH SINH NHẬT</h2>
+            </NavLink>
+            {isShowBirthdayBox && (
+              <div className="min-w-[200px] p-3 absolute z-30 top-[30px] left-0 bg-primary">
+                <Popper type="birthdaycake" />
+              </div>
+            )}
+          </div>
+
+          <div className="nav-item">
+            <NavLink to="/cookies" className="navlink">
+              <h2 className="hover:text-button">BÁNH COOKIES</h2>
+            </NavLink>
+          </div>
+
+          <div className="nav-item">
+            <NavLink to="/brownie" className="navlink">
+              <h2 className="hover:text-button">BÁNH BROWNIE</h2>
+            </NavLink>
+          </div>
+
+          <div
             className="nav-item relative"
             onMouseOver={() => setShowCokiesBox(true)}
             onMouseOut={() => setShowCokiesBox(false)}
           >
-            <h2 className="hover:text-button">COOKIES & MINICAKE</h2>
-            {isShowCokiesBox && <Popper cakes={cakes.cokie} />}
-          </Link>
+            <NavLink to="/cupcake" className="navlink">
+              <h2 className="hover:text-button">CUPCAKE</h2>
+            </NavLink>
+
+            {isShowCokiesBox && (
+              <div className="min-w-[200px] p-3 absolute z-30 top-[30px] left-0 bg-primary">
+                <Popper type="cupcake" />
+              </div>
+            )}
+          </div>
         </nav>
 
         {/* Search */}
@@ -132,6 +125,11 @@ function Header() {
           </button>
         </div>
       </div>
+
+      {isSuccessRegisterAlert && (
+        <SuccessAlert message="Đăng ký thành công !" />
+      )}
+      {isSuccessLoginAlert && <SuccessAlert message="Đăng nhập thành công" />}
     </div>
   );
 }
