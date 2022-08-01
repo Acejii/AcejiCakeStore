@@ -9,7 +9,7 @@ function BirthdayCake() {
     <>
       <Header />
       <Banner title="Bánh sinh nhật" />
-      <CakeTypeDetails type="birthdaycake" />
+      <CakeTypeDetails type="birthdaycake" title="Bánh sinh nhật" />
       <Footer />
     </>
   );

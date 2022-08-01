@@ -9,7 +9,7 @@ function Cupcake() {
     <>
       <Header />
       <Banner title="Bánh Cupcake" />
-      <CakeTypeDetails type="cupcake" />
+      <CakeTypeDetails type="cupcake" title="Bánh Cupcake" />
       <Footer />
     </>
   );

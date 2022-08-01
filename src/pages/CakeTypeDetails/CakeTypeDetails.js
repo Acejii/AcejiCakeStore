@@ -2,13 +2,13 @@ import React from "react";
 import Popper from "../../utils/Popper/Popper";
 import CakeItem from "../../layouts/Content/CakeItem/CakeItem";
 
-function CakeTypeDetails({ type }) {
+function CakeTypeDetails({ type, title }) {
   return (
     <div className="py-[50px] px-[30px] bg-secondary">
       {/* title */}
       <div className="text-center">
         <h2 className="text-[28px] font-bold text-primary">
-          {type.toUpperCase()}
+          {title.toUpperCase()}
         </h2>
       </div>
 

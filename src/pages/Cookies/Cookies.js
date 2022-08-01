@@ -9,7 +9,7 @@ function Cookies() {
     <>
       <Header />
       <Banner title="Bánh Cookies" />
-      <CakeTypeDetails type="cookies" />
+      <CakeTypeDetails type="cookies" title="Bánh Cookies" />
       <Footer />
     </>
   );

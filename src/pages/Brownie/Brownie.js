@@ -9,7 +9,7 @@ function Brownie() {
     <>
       <Header />
       <Banner title="Bánh brownie" />
-      <CakeTypeDetails type="brownie" />
+      <CakeTypeDetails type="brownie" title="Bánh Brownie" />
       <Footer />
     </>
   );
