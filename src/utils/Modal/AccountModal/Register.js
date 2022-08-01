@@ -137,7 +137,7 @@ function Register({
             {...register("email", {
               required: "Không được để trống",
               pattern: {
-                value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+                value: /^[\w-]+@([\w-]+\.)+[\w-]{2,4}$/,
                 message: "Email không hợp lệ",
               },
               onChange: (e) => {
