@@ -3,7 +3,7 @@ import NewsList from "./NewsList/NewsList";
 
 function News() {
   return (
-    <div>
+    <div className="w-[1280px] m-auto">
       <div className="py-[50px]">
         <div className="text-center mb-[50px]">
           <h2 className="text-24 font-extrabold text-[#00a887] mb-2">
