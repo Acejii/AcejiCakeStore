@@ -5,12 +5,10 @@ import News from "./News/News";
 
 function Content() {
   return (
-    <div className="bg-secondary">
-      <div className="min-h-[1000px]">
-        <CakeList />
-        <BookingForm />
-        <News />
-      </div>
+    <div className="bg-secondary min-h-[1000px]">
+      <CakeList />
+      <BookingForm />
+      <News />
     </div>
   );
 }

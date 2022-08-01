@@ -16,7 +16,7 @@ function CakeItem({ type, title = "" }) {
   };
 
   return (
-    <div className="w-[1280px] m-auto">
+    <div>
       <div className="pt-[50px] pb-[25px]">
         {/* title */}
         {title !== "" && (
