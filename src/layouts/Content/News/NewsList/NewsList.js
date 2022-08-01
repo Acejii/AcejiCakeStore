@@ -35,6 +35,7 @@ function NewsList() {
     <div className="px-10">
       {news.length > 0 ? (
         <Swiper
+          cssMode={true}
           slidesPerView={3}
           spaceBetween={30}
           loop={true}

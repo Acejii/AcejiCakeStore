@@ -11,8 +11,9 @@ import "./Slider.scss";
 
 function Slider() {
   return (
-    <div className="h-[450px]">
+    <div>
       <Swiper
+        speed={1000}
         spaceBetween={30}
         pagination={{
           clickable: true,
@@ -27,13 +28,13 @@ function Slider() {
       >
         <SwiperSlide>
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/aceji-cake-store.appspot.com/o/carousel-1.png?alt=media&token=aab448a6-52aa-4b7d-ae65-c5c84d193060"
+            src="https://firebasestorage.googleapis.com/v0/b/aceji-cake-store.appspot.com/o/carousel-1.png?alt=media&token=6fc9e436-2551-4ccd-a4ae-d954ad45f3f9"
             alt="carousel"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/aceji-cake-store.appspot.com/o/carousel-2.png?alt=media&token=a899ac60-9c6f-46ee-bc97-a8188f6bfa05"
+            src="https://firebasestorage.googleapis.com/v0/b/aceji-cake-store.appspot.com/o/carousel-2.png?alt=media&token=0b24f3a6-5644-45cf-aa80-a8f3ef870320"
             alt="carousel"
           />
         </SwiperSlide>
