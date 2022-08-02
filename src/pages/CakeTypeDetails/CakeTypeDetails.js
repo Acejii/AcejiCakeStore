@@ -4,7 +4,7 @@ import CakeItem from "../../layouts/Content/CakeItem/CakeItem";
 
 function CakeTypeDetails({ type, title }) {
   return (
-    <div className="py-[50px] px-[30px] bg-secondary">
+    <div className="py-[50px] px-[40px] bg-secondary">
       {/* title */}
       <div className="text-center">
         <h2 className="text-[28px] font-bold text-primary">
@@ -13,9 +13,9 @@ function CakeTypeDetails({ type, title }) {
       </div>
 
       {/* main */}
-      <div className="flex relative">
+      <div className="flex justify-between relative">
         {/* sidebar */}
-        <aside className="sidebar-custom mt-[68px] w-1/4 h-fit mr-2 border-t-yellow-900 rounded-[10px] overflow-hidden shadow-md">
+        <aside className="sidebar-custom mt-[68px] w-1/4 h-fit border-t-yellow-900 rounded-[10px] overflow-hidden shadow-md">
           <h2 className="text-[20px] text-white font-bold bg-primary py-3 pl-4">
             DANH MỤC MENU
           </h2>
@@ -25,7 +25,7 @@ function CakeTypeDetails({ type, title }) {
         </aside>
 
         {/* product list*/}
-        <div className="w-3/4 ml-2">
+        <div className="w-3/4">
           <CakeItem type={type} />
         </div>
       </div>
