@@ -32,7 +32,7 @@ function NewsList() {
   }, []);
 
   return (
-    <div className="px-10">
+    <div className="pl-10 pr-[55px]">
       {news.length > 0 ? (
         <Swiper
           cssMode={true}

@@ -16,7 +16,7 @@ import "./Footer.scss";
 function Footer() {
   return (
     <div className="footer-background">
-      <div className="w-[1280px] m-auto text-white px-10 pt-[50px] pb-[20px]">
+      <div className="w-[1280px] m-auto text-white pl-10 pr-[55px] pt-[50px] pb-[20px]">
         <div className="flex relative z-[2]">
           {/* About us */}
           <div className="w-1/4">
